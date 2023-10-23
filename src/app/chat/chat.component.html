@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <div class="chat_header">
+        <h3 class="text-center my-2">Welcome to chatBot</h3>
+        <button class="btn btn-danger" (click)="leaveChat()">Leave Chat</button>
+    </div>
+    <div class="messaging">
+        <div class="inbox_msg">
+            <div class="mesgs">
+                <div #scrollMe class="msg_history">
+                    <ng-container *ngFor="let message of messages">
+                        <div >
+                            <div 
+                                [ngClass]="{'incoming_msg': message.user === 'sam', 'outgoing_msg' : message.user != 'sam'}">
+                                <div *ngIf="message.user === 'sam'"  class="incoming_msg_img">
+                                    <img src="assets/images/frog.jpg" alt="">
+                                </div>
+                                <div *ngIf="message.user === 'sam'" class="received_msg">
+                                    <div class="received_withd_msg">
+                                        <p>{{message.message}}</p>
+                                    </div>
+                                </div>
+
+                                
+                                <div *ngIf="message.user != 'sam'" class="sent_msg">
+                                    <p>{{message.message}}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="type_msg">
+                    <div class="input_msg_write">
+                        <form [formGroup]="formChat" (ngSubmit)="onFormSubmit()">
+                            <input type="text"  formControlName="message" class="write_msg" placeholder="Type a message">
+                            <button class="msg_send_btn" type="submit" ><i class="fa fa-paper-plane-o" aria-haspopup="true"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

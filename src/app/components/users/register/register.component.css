@@ -1,0 +1,13 @@
+.btn-color{
+    background-color: #185a06;
+    color: #fff;
+}
+
+.cardbody-color{
+    background-color: #52ACFF;
+    background-image: linear-gradient(180deg, #52ACFF 15%, #452703 100%);
+}
+
+a{
+    text-decoration: none;
+}

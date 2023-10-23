@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center text-dark mt-5">Welcome to ChatBot</h2>
+            <div class="text-center mb-5 text-dark">Login</div>
+            <div class="card my-5">
+                <form class="card-body cardbody-color p-lg-5" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    
+                    <div class="text-center">
+                        <img src="assets/images/frog.jpg"
+                        class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="text" class="form-control" formControlName="email">
+                    </div>
+                
+                    <div class="mb-3">
+                        <label>Password</label>
+                        <input type="password" class="form-control" formControlName="password">
+                    </div>
+                
+                    <input type="submit" value="Login" class="text-center btn btn-color px-5 mb-5 w-100">
+                    <input type="button" value="Register account" (click)="register()" class="text-center btn btn-color-register px-5 mb-5 w-100">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

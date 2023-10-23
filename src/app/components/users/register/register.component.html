@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center text-dark mt-5">Register form</h2>
+            <div class="card my-5">
+                <form class="card-body cardbody-color p-lg-5" [formGroup]="formRegister" (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label >Email</label>
+                        <input type="text" class="form-control" formControlName="email">
+                    </div>
+                
+                    <div class="mb-3">
+                        <label >Password</label>
+                        <input type="password" class="form-control" formControlName="password">
+                    </div>
+                
+                    <input type="submit" value="Register" class="text-center btn btn-color px-5 mb-5 w-100">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
